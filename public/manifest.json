@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Graphcal for GitHub",
+  "version": "0.1.0",
+  "description": "Open Graphcal sheets from GitHub in the Graphcal viewer, read with your GitHub sign-in.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5bq/imJo6cY3X9jOCyJ5DySAYMayeuF6lsrSKL/Men9kETn3zTXwATmJGjRGmA/mBjsl3ALDjhHi3vqmugZEb7zPtf9aSvJ32Kn10Z+SRT2ExgzVgd9OZOzQ4FC1yezpeI6BBS/oy2GM8FLMI2UpvalY/Q7sTSvxW+Hyb2gi8DH0MkmZjCmxSYUeQvbxjZdyakaC1s8W8EH6ma1Oiwvq/qM5lgy0HmlodP3Q4GPr73eAeBHmgThX4SjL97GNqdFzweENaAgyuXjQl4FLDjvrpi03TOjUygIL83kviV+1fHKvx8W2WGoPqrfcakffueCPTxFXJx9TO2C+Q+bIhd68RwIDAQAB",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_title": "Open in Graphcal view",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png" }
+  },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://github.com/*", "https://raw.githubusercontent.com/*"],
+  "externally_connectable": { "matches": ["https://graphcal.org/*", "http://localhost/*"] }
+}

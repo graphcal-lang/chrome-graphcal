@@ -1,0 +1,39 @@
+{
+  "name": "chrome-graphcal",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT OR Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vp build",
+    "icons": "node scripts/icons.mjs",
+    "zip": "pnpm run build && cd dist && zip -r ../chrome-graphcal.zip ."
+  },
+  "devDependencies": {
+    "@types/chrome": "0.3.6",
+    "@types/node": "26.6.5",
+    "typescript": "7.0.2",
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.3.0",
+    "vite-plus": "1.3.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@*": "npm:@voidzero-dev/vite-plus-core@1.3.0"
+    },
+    "peerDependencyRules": {
+      "allowAny": [
+        "vite"
+      ],
+      "allowedVersions": {
+        "vite": "*"
+      }
+    }
+  }
+}
